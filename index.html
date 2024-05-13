@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>girlboss</title>
+    <style>
+        body {
+            margin: 3px;
+        }
+
+        #HeaderOfPage {
+            display: flex;
+            justify-content: flex-end;
+            height: 50px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-between;
+            height: fit-content;
+
+        }
+        .logo{
+            padding: 0%;
+            padding-left: 15px;
+        }
+
+        button {
+            border: 0in;
+            padding: 10px;
+            background-color: transparent;
+            cursor: pointer;
+
+        }
+
+
+        .Headers {
+            font-size: 15pt;
+            font-weight: bold;
+            border: none;
+            padding: 10px;
+            padding-left: 0%;
+            background-color: transparent;
+            cursor: pointer;
+            
+        }
+
+
+
+            .Search {
+                
+                border: 1px solid #121010;
+                border-radius: 3%;
+                font-size: 15px;
+                outline: none;
+                padding: 10px;
+                border-radius: 0 3px 3px 0;
+                position: absolute;
+                top: 6.2%;
+                left: 84%;
+                
+                
+                
+            }
+
+
+
+
+
+        #slider {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-top: 20px;
+
+        }
+
+        #sliders {
+            display: flex;
+            animation: slide 8s linear infinite;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+
+        }
+
+        @keyframes slide {
+
+            0% {
+                transform: translateX(0%);
+            }
+
+            15% {
+                transform: translateX(-100%);
+            }
+
+            30% {
+                transform: translateX(-100%);
+            }
+
+            45% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-100%);
+            }
+
+            90% {
+                transform: translateX(-100%);
+            }
+
+            97% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+
+
+        }
+
+        #navigation-container {
+            text-align: left;
+            /* Align the content in the center */
+            height: 100px;
+            padding-top: 30px;
+        }
+
+        .navigation-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            /* Display the items in a row */
+            justify-content: center;
+            /* Center the items horizontally */
+        }
+
+        li {
+            margin-right: 10px;
+            /* Add spacing between menu items if needed */
+            display: inline;
+        }
+
+        .navigation-menu-link {
+            text-decoration: none;
+            color: #333;
+            /* Set your desired text color */
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            /* Optional: Set the font weight */
+        }
+
+        .money {
+            padding-top: 1px;
+            padding-left: 50px;
+            padding-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .money img {
+            transition: transform 0.3s ease-in-out;
+            height: 65%;
+            width: 65%;
+        }
+
+        .money img:hover {
+            transform: scale(1.03);
+        }
+
+        .howTO {
+            padding-left: 50px;
+            height: 20px;
+        }
+
+        #A_String {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .String {
+            padding-left: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+
+        #step_Link {
+            color: black;
+            text-decoration: none;
+        }
+
+        #line {
+            height: 50px;
+            padding-top: 10px;
+            justify-content: baseline;
+        }
+
+        .totalFresh {
+            padding-left: 0px;
+            padding-bottom: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+        }
+
+        .divOfImg {
+            display: flex;
+
+        }
+
+        .image_container {
+            padding-left: 50px;
+            width: 50vw;
+            overflow: hidden;
+            padding-bottom: 50px;
+        }
+
+        .img_Wellness {
+            display: block;
+            height: auto;
+            width: 90%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img_Wellness:hover {
+            transform: scale(1.03);
+        }
+
+        .all_hyperLinks {
+            text-decoration: none;
+            color: black;
+            stop-color: black;
+            stroke-width: 0px;
+        }
+
+        .how {
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px;
+            stroke-width: 2px;
+            padding-bottom: 20px;
+        }
+
+        .para {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+            stroke: black;
+            stroke-width: 1px;
+            padding-top: 10pt;
+        }
+
+        p {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .backgroundWala {
+            position: relative;
+            width: 100vw;
+            height: 90vh;
+
+        }
+
+        .backgroundWala::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+
+            background-image: url('perfectGirls.jpg');
+            background-repeat: no-repeat;
+            /* Prevent image from repeating */
+            background-size: cover;
+            z-index: -1;
+
+
+        }
+
+        .Opportunity {
+            height: 400px;
+            width: 100%;
+            position: relative;
+            background-color: rgb(220, 201, 231);
+            display: grid;
+            justify-content: center;
+            position: relative;
+
+        }
+
+        .lookingFor {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35pt;
+            position: absolute;
+            top: 20%;
+            left: 30%;
+        }
+
+        .discription {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+            position: absolute;
+            top: 40%;
+            left: 20%;
+
+        }
+        .Find_JOB{
+            font-size: 25px;
+            
+            position: absolute;
+            top: 60%;
+            left: 40%;
+            text-align: center;
+      text-decoration:none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: 2px solid #1e1919;
+      border-radius: 2px;
+
+      background-color: #252a2d;
+      color: #ffffff; /* Text color */
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Optional: Add a subtle box shadow */
+
+
+        }
+        .Find_JOB:hover {
+      background-color: #252a2d;
+      color: #5c5b5b;
+      border-color: #252a2d;
+    }
+
+    .sexyoneGirl{
+        position: relative;
+            width: 100vw;
+            height: 90vh;
+    }
+
+    .sexyoneGirl::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+
+            background-image: url('sexyone.jpg');
+            background-repeat: no-repeat;
+            /* Prevent image from repeating */
+            background-size: cover;
+            z-index: -1;
+
+
+        }
+        
+        .featuredEp{
+            width: 100vw;
+            height: 300px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .featured{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40pt;
+            font-weight: bold;
+        }
+
+        .styleGirl{
+            position: relative;
+            width: 100vw;
+            height: 90vh;
+        }
+
+        .styleGirl::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+
+            background-image: url('girlbackground.jpg');
+            background-repeat: no-repeat;
+            /* Prevent image from repeating */
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .foot{
+            min-height: 500px;
+            max-width: 100%;
+            background-color: #000000;
+            
+            
+        }
+        .foot::before{
+            position: relative;
+            display: inline-block;
+            justify-content: left;            
+        }
+        .one{
+            position: absolute;
+            padding: 0%;
+            padding-left: 10px;
+            max-width: 26%;   
+            
+            
+            
+        }.thrill{
+            padding-left: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: #f0f0f0;
+        }
+        .two{
+            
+            
+            justify-content: left;
+            left: 30%;
+            position: absolute;
+            
+        }
+        .botList{
+            
+            justify-content: left;
+            top : 110pt;
+            position: absolute;
+            display: block;
+            line-height: 25px;   
+            padding: 0%;         
+            
+            
+            
+        }
+        .Hlink{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .three{
+
+        }
+        .four{
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="HeaderOfPage">
+        <button class="button" type="text">Cart</button>
+        <button class="button" type="text">Checkout</button>
+    </div>
+
+
+    <div class="main">
+
+        <div class="start">
+            <img src="logo.jpg" class="logo">
+        </div>
+
+        <div class="mid">
+            <button class="Headers">READ</button>
+            <button class="Headers">NEWSLETTER</button>
+            <button class="Headers">PODCAST</button>
+            <button class="Headers">FIND A JOB</button>
+            <button class="Headers">RESOURCES</button>
+        </div>
+
+        <div class="end">
+            <input class="Search" type="text" placeholder="Search">
+            <button style="padding: 0%;" type="submit"><img src=search.jpg height="30px" width="30px"></button>
+        </div>
+
+    </div>
+
+    <div id="slider">
+        <div id="sliders">
+
+            <div class="slide">
+                <img class="img" src=girl2.jpg>
+            </div>
+            <div class="slide">
+                <img class="img" src=girl1.jpg>
+            </div>
+            <div class="slide">
+                <img class="img" src=nogirl.jpg>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="navigation-container">
+
+        <ul id="navigation-menu" type="none">
+            <li><a class="navigation-menu-link" href="">HOW TO</a></li>
+            <li><a class="navigation-menu-link" href="">TRENDS</a></li>
+            <li><a class="navigation-menu-link" href="">WELLNESS</a></li>
+            <li><a class="navigation-menu-link" href="">SUCESS STORIES</a></li>
+            <li><a class="navigation-menu-link" href="">NOW WHAT?</a></li>
+        </ul>
+    </div>
+
+    <div class="money">
+        <img src="money.jpg" class="money_Zoom">
+    </div>
+
+    <div class="howTO">
+        <span class="how">HOW
+            TO</span>
+    </div>
+
+    <div id="A_String">
+
+        <label class="String">
+            <a href="" id="step_Link"> 13-Step Guide To Getting Your Funds Right In 2024 </a>
+        </label>
+    </div>
+    <div id="line">
+        <span class="totalFresh" style="padding-left: 50px" ;>Ready to start the New Year totally fresh? Here’s how to
+            get your finances in order beforehand.</span>
+    </div>
+
+    <div class="divOfImg">
+        <div class="image_container">
+
+            <a href="" class="all_hyperLinks"> <img src="Wellness.jpg" class="img_Wellness"> </a>
+
+            <br>
+
+            <span class="how">WELLNESS</span>
+            <br>
+            <a href="" class="all_hyperLinks">
+                <p class="para">Can We Stop Policing the Way Women Eat at Work?</p>
+            </a>
+            <br>
+            <p>The corporate lunchroom can be a breeding ground for unsolicited comments about food, weight, and our
+                bodies.</p>
+        </div>
+
+        <div class="image_container">
+
+            <a href="" class="all_hyperLinks">
+                <img src="Horoscope.jpg" class="img_Wellness">
+            </a>
+            <br>
+            <span class="how">TRENDS</span>
+            <br>
+            <a href="" class="all_hyperLinks">
+                <p class="para">Your 2024 Career Horoscope is Here</p>
+            </a>
+            <br>
+            <p>Trust us, you're gonna wanna hear what the stars have to say.</p>
+        </div>
+    </div>
+
+    <div class="divOfImg">
+        <div class="image_container">
+
+            <a href="" class="all_hyperLinks"> <img src="Wellness2.jpg" class="img_Wellness"> </a>
+
+            <br>
+
+            <span class="how">WELLNESS</span>
+            <br>
+            <a href="" class="all_hyperLinks">
+                <p class="para">11 Low-Stakes Ways to Feel Better Now</p>
+            </a>
+            <br>
+            <p>TWant to know how to feel better now? Set the right tone for 2024 (read: no bad vibes allowed) with these
+                easy habits.</p>
+        </div>
+
+        <div class="image_container">
+
+            <a href="" class="all_hyperLinks">
+                <img src="HowTO.jpg" class="img_Wellness">
+            </a>
+            <br>
+            <span class="how">HOW TO</span>
+            <br>
+            <a href="" class="all_hyperLinks">
+                <p class="para">We Crowd-Sourced 22 Ways to Have a Better 2024</p>
+            </a>
+            <br>
+            <p>Our dear Girlboss readers shared their best bits of life-changing advice. Here's what they had to say...
+            </p>
+        </div>
+    </div>
+
+
+    <!--To be done -->
+    <div class="backgroundWala">
+    </div>
+
+    <div class="Opportunity">
+
+        <div class="lookingFor">
+            <span style="position: relative; justify-items: baseline;">Looking for a New Opportunity?</span>
+        </div>
+        <div class="discription">
+            <p>Girlboss Jobs is the largest job marketplace in the world for ambitious women looking to make things
+                happen.</p>
+            <br>
+
+
+        </div>
+        <div class="button">
+            <button class="Find_JOB">FIND YOUR JOB</button>
+        </div>
+    </div>
+
+    <div class="sexyoneGirl">  
+
+    </div>
+
+    <div class="featuredEp">
+        <span class="featured">Featured Episodes</span>
+
+    </div>
+
+    <div class="featuredGirls">
+        <div class="divOfImg">
+            <div class="image_container">
+    
+                <a href="" class="all_hyperLinks"> <img src="w82ghyn3.png" class="img_Wellness"> </a>
+    
+                <br>
+    
+                <span class="how">PODCAST</span>
+                <br>
+                <a href="" class="all_hyperLinks">
+                    <p class="para">Olivia Perez Worked for Teen Vogue, Glossier and Hermès—All Before Graduating College
+                    </p>
+                </a>
+                <br>
+               
+            </div>
+            <div class="image_container">
+    
+                <a href="" class="all_hyperLinks"> <img src="gb_radio_episode_webfeature_laurenchan_544x352.jpg" class="img_Wellness"> </a>
+    
+                <br>
+    
+                <span class="how">PODCAST</span>
+                <br>
+                <a href="" class="all_hyperLinks">
+                    <p class="para">Lauren Chan is Really Good at Figuring Sh*t Out</p>
+                </a>
+                <br>
+                
+            </div>
+    
+            <div class="image_container">
+    
+                <a href="" class="all_hyperLinks">
+                    <img src="gb_radio_episode_webfeature_maitreyi_544x352.jpg" class="img_Wellness">
+                </a>
+                <br>
+                <span class="how">PODCAST</span>
+                <br>
+                <a href="" class="all_hyperLinks">
+                    <p class="para">Maitreyi Ramakrishnan's Career Has Only Just Begun</p>
+                </a>
+                <br>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="styleGirl">
+
+    </div>
+    <footer class="foot">
+        <div id="lastOne">
+            <div class="one">
+                <div class="footer_logo">
+                <img src="images.jpg" style="padding: 0%;">
+
+               <p class="thrill"> We're here to spark the thrill of possibility</p>
+                </div>
+            </div>
+
+            <div class="two">
+                <ul class="botList">
+                    <li><a href="" class="Hlink">Terms & Conditions</a></li>
+                    <li><a href="" class="Hlink">Privacy</a></li>
+                    <li><a href="" class="Hlink">Accessibility</a></li>
+                    <li><a href="" class="Hlink">Advertise With Us</a></li>
+                    <li><a href="" class="Hlink">Blog</a></li>
+                    <li><a href="" class="Hlink">Guides</a></li>
+                </ul>
+            </div>
+
+            <div class="three">
+
+            </div>
+
+            <div class="four">
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
